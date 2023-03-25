@@ -1,14 +1,17 @@
 var mysql = require('mysql');
 var express = require('express');
+const cors = require('cors');
 
 let port = 3001;
 const app = express();
+app.use(express.json())
+app.use(cors())
 
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "pescidex"
+  database: ""
 });
 
 con.connect(function(err) {
@@ -19,6 +22,8 @@ con.connect(function(err) {
 app.post('/login', (req, res) =>{
 const nickname = req.body.nickname
 const password = req.body.password
+
+console.log(nickname, password)
 
 //prende i dati dal front end e controlla che esistano gli utenti nel database
 
