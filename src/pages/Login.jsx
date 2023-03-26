@@ -4,9 +4,9 @@ import Axios from 'axios'
 const Login = () => {
   const [nicknameLog, setNicknameLog] = useState("");
   const [passwordLog, setPasswordLog] = useState("");
-  const login =  ()=>{
+  const auth =  ()=>{
     Axios.post('http://localhost:3001/login', {nickname: nicknameLog, password: passwordLog}).then((response)=>{
-      console.log(response)
+      console.log(response.data)
     })
   }
   return (
@@ -19,7 +19,7 @@ const Login = () => {
         <div className='text-center' >
         <input type="text" name="nickname" id="nickname" placeholder='Nickname' required className='text-center w-70 h-9 bg-slate-600 rounded-md outline-none ' onChange={(e)=> {setNicknameLog(e.target.value);}} autoComplete="off"/><br /><br />
         <input type="password" name="password" id="password" placeholder='Password' className='w-70 h-9 bg-slate-600 rounded-md text-center outline-none' required onChange={(e)=> {setPasswordLog(e.target.value);}} autoComplete="off"/><br /><br /><br />
-        <input type="button" value="Accedi" className='font-semibold bg-green-400 rounded-md h-10 w-20 shadow-xl hover:scale-150 transition-all hover:cursor-pointer' onClick={login}/>
+        <input type="button" value="Accedi" className='font-semibold bg-green-400 rounded-md h-10 w-20 shadow-xl hover:scale-150 transition-all hover:cursor-pointer' onClick={auth}/>
         </div>
         </div>
       </div>

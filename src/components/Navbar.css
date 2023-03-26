@@ -1,0 +1,12 @@
+#container_nav{
+    display: none;
+}
+
+
+.one { transform: rotate(-30deg) translate(130px); }
+.two { transform: rotate(-50deg) translate(130px); }
+.three { transform: rotate(-70deg) translate(130px); }
+.four { transform: rotate(-90deg) translate(130px); }
+.five { transform: rotate(-110deg) translate(130px); }
+.six { transform: rotate(-130deg) translate(130px); }
+.seven { transform: rotate(-150deg) translate(130px); }
