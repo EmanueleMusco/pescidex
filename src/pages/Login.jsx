@@ -11,10 +11,10 @@ const Login = () => {
   }
   return (
 
-    <div className='login_form'>
+    <div className='login_form bg-slate-600'>
       <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen '>
           <h1 className='text-center text-4xl font-bold relative translate-y-3 '>Pesci<span className='text-red-700'>Dex</span></h1>
-        <div className=' flex items-center justify-center bg-white columns-xl w-96 h-96 rounded-xl shadow-2xl'>
+        <div className=' flex items-center justify-center bg-gray-100 columns-xl w-96 h-96 rounded-xl shadow-2xl'>
       
         <div className='text-center' >
         <input type="text" name="nickname" id="nickname" placeholder='Nickname' required className='text-center w-70 h-9 bg-slate-600 rounded-md outline-none ' onChange={(e)=> {setNicknameLog(e.target.value);}} autoComplete="off"/><br /><br />
